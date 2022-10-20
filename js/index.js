@@ -36,6 +36,20 @@ function compra() {
     }
 }
 
+function descuento() {
+    let descuento = 0
+    if (compraTotal >= 1000) {
+        descuento = 10
+    }
+
+    let valorDescuento = compraTotal * (descuento / 100)
+    let valorFinal = compraTotal - valorDescuento
+    return valorFinal
+}
+   
+
 compra();
 
-final = alert(`el total de su compra es ${compraTotal}`);
+const totalCompraConDescuento = descuento(compraTotal);
+
+final = alert(`el total de su compra es ${totalCompraConDescuento}`);
